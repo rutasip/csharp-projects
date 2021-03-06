@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FirstApp",
+    "\\FirstApp\\FirstApp",
+    "\\FirstApp\\FirstApp\\Interfaces",
+    "\\FirstApp\\FirstApp\\Models",
+    "\\FirstApp\\FirstApp\\PageModels",
+    "\\FirstApp\\FirstApp\\Pages",
+    "\\FirstApp\\FirstApp\\Services"
+  ],
+  "SelectedNode": "\\FirstApp.sln",
+  "PreviewInSolutionExplorer": false
+}

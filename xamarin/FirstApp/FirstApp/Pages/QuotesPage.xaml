@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstApp.Pages.QuotesPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="plus.png" Command="{Binding AddQuoteCommand}" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <Grid>
+            <ListView SeparatorVisibility="None" CachingStrategy="RecycleElement" HasUnevenRows="True" ItemsSource="{Binding Quotes}" SelectedItem="{Binding SelectedQuote}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="5" HasShadow="False"  Padding="20">
+                                <StackLayout>
+                                    <Label Text="{Binding quote}" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Black"/>
+                                    <Label Text="{Binding author}" HorizontalTextAlignment="Center" FontSize="Small" TextColor="Black"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" Color="#E1341E" IsRunning="{Binding IsBusy}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
